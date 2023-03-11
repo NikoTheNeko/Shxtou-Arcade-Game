@@ -13,7 +13,7 @@ public class CatcherBehavior : MonoBehaviour{
     public int ScoreAmountToBeAdded = 1;
 
     //[Header("SFX")]
-    //public AudioSource SoundEffect;
+    public AudioSource SoundEffect;
 
     #endregion
 
@@ -61,10 +61,11 @@ public class CatcherBehavior : MonoBehaviour{
             if(ScoreKeeper && !TokenObject.GetHasActivated()){
                 AddScoreToArcade();
                 TokenObject.SetHasActivated(true);
+                SoundEffect.Play();
             }
         }
 
-        //SoundEffect.Play();
+        
     }
 
     #endregion

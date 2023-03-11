@@ -62,7 +62,7 @@ public class ArcadeBehavior : MonoBehaviour{
 
         //Creates a highscore variable or just finds one
         if(PlayerPrefs.GetInt("HighScore") <= 0)
-            PlayerPrefs.SetInt("HighScore", 28);
+            PlayerPrefs.SetInt("HighScore", 690);
         
         //Sets the current timer to the max timer count specified by user
         CurrentTimer = MaxTime;
@@ -235,7 +235,7 @@ public class ArcadeBehavior : MonoBehaviour{
     **/
     private void ShowGameplayText(){
         ScoreAndTokenText.text = "Score: " + Score.ToString() + 
-                                "\nBalls Left: " + TokenCount.ToString();
+                                "\nTokens Left: " + TokenCount.ToString();
     }
 
     private void UpdateTimer(){

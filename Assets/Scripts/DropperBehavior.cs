@@ -19,7 +19,7 @@ public class DropperBehavior : MonoBehaviour{
     public bool DropperIsActive = true;
 
     [Header("SFX")]
-    //public AudioSource SoundEffect;
+    public AudioSource SoundEffect;
 
 
     #endregion
@@ -47,7 +47,7 @@ public class DropperBehavior : MonoBehaviour{
         Drops the token at the specified place
     **/
     private void DropToken(){
-        //SoundEffect.Play();
+        SoundEffect.Play();
         //Spawns the object at the location of the block, or place it's thrown at i guess
         var TokenObject = Object.Instantiate(DroppedObject, DropLocation.position, Rotato);
 
